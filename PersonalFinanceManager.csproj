@@ -59,6 +59,12 @@
           <DependentUpon>LoginForm.cs</DependentUpon>
         </Compile>
         <Compile Include="Program.cs" />
+        <Compile Include="Properties\AccountSummary.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Properties\AccountSummary.Designer.cs">
+          <DependentUpon>AccountSummary.cs</DependentUpon>
+        </Compile>
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
