@@ -6,31 +6,46 @@ using PersonalFinanceManager.Properties;
 namespace PersonalFinanceManager.Properties
 {
     public partial class Dashboard : Form
+    
+    
     {
+        
+        
         public static Dashboard instance;
         public Label lbl;
-       public Dashboard(string username, int index)
-{
-    InitializeComponent();
-    usernameDash.Text = "Welcome, " + username; // Set the username on the dashboard label
-}
+        private string username;
+        private int index;
+
+        public Dashboard(string username, int index)
+        {
+            InitializeComponent();
+            this.username = username;
+            this.index = index;
+            usernameDash.Text = "Welcome, " + username; // Set the username on the dashboard label
+        }
        
-       public void loadform(object Form)
+       public void LoadForm(Form form)
        {
-           if (this.mainpanel.Controls.Count > 0)
-               this.mainpanel.Controls.RemoveAt(0);
-           Form f = Form as Form;
-           f.TopLevel = false;
-           f.Dock = DockStyle.Fill;
-           this.mainpanel.Controls.Add(f);
-           this.mainpanel.Tag = f;
-           f.Show();
+           if (mainpanel.Controls.Count > 0)
+               mainpanel.Controls.RemoveAt(0);
+
+           form.TopLevel = false;
+           form.Dock = DockStyle.Fill;
+
+           if (form is SavingGoals savingGoalsForm)
+           {
+               savingGoalsForm.Username = username;
+               savingGoalsForm.Index = index;
+           }
+
+           mainpanel.Controls.Add(form);
+           mainpanel.Tag = form;
+           form.Show();
        }
 
-
-       private void accountSum_Click(object sender, EventArgs e)
+       private void SavingGoal_Click(object sender, EventArgs e)
        {
-           loadform(new AccountSummary());
+           LoadForm(new SavingGoals());
        }
     }
 }

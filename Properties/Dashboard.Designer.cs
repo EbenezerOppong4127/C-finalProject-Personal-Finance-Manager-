@@ -36,20 +36,16 @@ namespace PersonalFinanceManager.Properties
             this.financialGoal = new System.Windows.Forms.Button();
             this.incomeOverview = new System.Windows.Forms.Button();
             this.expenseTrack = new System.Windows.Forms.Button();
-            this.accountSum = new System.Windows.Forms.Button();
+            this.SavingGoal = new System.Windows.Forms.Button();
             this.returntoDash = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameDash = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.trasReport = new System.Windows.Forms.Button();
-            this.setGoals = new System.Windows.Forms.Button();
-            this.createBudget = new System.Windows.Forms.Button();
             this.lbAcntBadg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +64,7 @@ namespace PersonalFinanceManager.Properties
             this.panel1.Controls.Add(this.financialGoal);
             this.panel1.Controls.Add(this.incomeOverview);
             this.panel1.Controls.Add(this.expenseTrack);
-            this.panel1.Controls.Add(this.accountSum);
+            this.panel1.Controls.Add(this.SavingGoal);
             this.panel1.Controls.Add(this.returntoDash);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,16 +106,17 @@ namespace PersonalFinanceManager.Properties
             this.expenseTrack.Text = "Expense Tracking";
             this.expenseTrack.UseVisualStyleBackColor = false;
             // 
-            // accountSum
+            // SavingGoal
             // 
-            this.accountSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.accountSum.Font = new System.Drawing.Font("Microsoft Uighur", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountSum.Location = new System.Drawing.Point(14, 204);
-            this.accountSum.Name = "accountSum";
-            this.accountSum.Size = new System.Drawing.Size(145, 39);
-            this.accountSum.TabIndex = 4;
-            this.accountSum.Text = "Account Summary";
-            this.accountSum.UseVisualStyleBackColor = false;
+            this.SavingGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SavingGoal.Font = new System.Drawing.Font("Microsoft Uighur", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavingGoal.Location = new System.Drawing.Point(14, 204);
+            this.SavingGoal.Name = "SavingGoal";
+            this.SavingGoal.Size = new System.Drawing.Size(145, 39);
+            this.SavingGoal.TabIndex = 4;
+            this.SavingGoal.Text = "Saving Goals";
+            this.SavingGoal.UseVisualStyleBackColor = false;
+            this.SavingGoal.Click += new System.EventHandler(this.SavingGoal_Click);
             // 
             // returntoDash
             // 
@@ -133,7 +130,6 @@ namespace PersonalFinanceManager.Properties
             this.returntoDash.Text = "Dashboard";
             this.returntoDash.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.returntoDash.UseVisualStyleBackColor = true;
-            
             // 
             // panel2
             // 
@@ -169,52 +165,12 @@ namespace PersonalFinanceManager.Properties
             // mainpanel
             // 
             this.mainpanel.BackColor = System.Drawing.Color.RosyBrown;
-            this.mainpanel.Controls.Add(this.trasReport);
-            this.mainpanel.Controls.Add(this.setGoals);
-            this.mainpanel.Controls.Add(this.createBudget);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Font = new System.Drawing.Font("Shonar Bangla", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainpanel.Location = new System.Drawing.Point(186, 0);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(765, 577);
             this.mainpanel.TabIndex = 3;
-            // 
-            // trasReport
-            // 
-            this.trasReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.trasReport.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trasReport.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.trasReport.Location = new System.Drawing.Point(288, 257);
-            this.trasReport.Name = "trasReport";
-            this.trasReport.Size = new System.Drawing.Size(188, 62);
-            this.trasReport.TabIndex = 11;
-            this.trasReport.Text = "Report";
-            this.trasReport.UseVisualStyleBackColor = false;
-            // 
-            // setGoals
-            // 
-            this.setGoals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.setGoals.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setGoals.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.setGoals.Location = new System.Drawing.Point(420, 105);
-            this.setGoals.Name = "setGoals";
-            this.setGoals.Size = new System.Drawing.Size(188, 62);
-            this.setGoals.TabIndex = 10;
-            this.setGoals.Text = "Set Goals";
-            this.setGoals.UseVisualStyleBackColor = false;
-            // 
-            // createBudget
-            // 
-            this.createBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.createBudget.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createBudget.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.createBudget.Location = new System.Drawing.Point(71, 105);
-            this.createBudget.Name = "createBudget";
-            this.createBudget.Size = new System.Drawing.Size(188, 62);
-            this.createBudget.TabIndex = 9;
-            this.createBudget.Text = "Create Budget";
-            this.createBudget.UseVisualStyleBackColor = false;
-            
             // 
             // lbAcntBadg
             // 
@@ -243,7 +199,6 @@ namespace PersonalFinanceManager.Properties
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.mainpanel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
@@ -253,17 +208,17 @@ namespace PersonalFinanceManager.Properties
 
         private System.Windows.Forms.Panel panel3;
 
-        private System.Windows.Forms.Button trasReport;
+        
 
-        private System.Windows.Forms.Button setGoals;
+       
 
         private System.Windows.Forms.Button financialGoal;
 
         private System.Windows.Forms.Button expenseTrack;
         private System.Windows.Forms.Button incomeOverview;
-        private System.Windows.Forms.Button createBudget;
+        
 
-        private System.Windows.Forms.Button accountSum;
+        private System.Windows.Forms.Button SavingGoal;
 
         public System.Windows.Forms.Panel mainpanel;
 

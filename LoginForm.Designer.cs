@@ -225,4 +225,10 @@ namespace PersonalFinanceManager
         private System.Windows.Forms.TextBox txtPassword;
     
     }
+    
+    
+    
+    
+    
+    
 }
