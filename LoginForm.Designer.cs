@@ -36,7 +36,7 @@ namespace PersonalFinanceManager
             this.clearButton = new System.Windows.Forms.Button();
             this.registrationButton = new System.Windows.Forms.Button();
             this.checkboxShowPass = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+           
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -113,16 +113,7 @@ namespace PersonalFinanceManager
             this.checkboxShowPass.UseVisualStyleBackColor = true;
             this.checkboxShowPass.CheckedChanged += new System.EventHandler(this.checkboxShowPass_CheckedChanged);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(150, 386);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(155, 29);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            
             // 
             // label2
             // 
@@ -193,7 +184,7 @@ namespace PersonalFinanceManager
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.registrationButton);
             this.Controls.Add(this.checkboxShowPass);
-            this.Controls.Add(this.checkBox1);
+            
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
@@ -217,7 +208,6 @@ namespace PersonalFinanceManager
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button registrationButton;
         private System.Windows.Forms.CheckBox checkboxShowPass;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label1;

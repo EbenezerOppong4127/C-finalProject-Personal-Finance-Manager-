@@ -16,30 +16,48 @@ namespace PersonalFinanceManager.Properties
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            // Your implementation for label click event
-        }
+       
 
-        private void saveGoal_Click(object sender, EventArgs e)
+       
+
+
+      
+
+        private void RegisterSavingGoals_Click(object sender, EventArgs e)
         {
+            // int userIndex = Index; // Use the Index property
+            // string username = Username; // Use the Username property
+            // MessageBox.Show($"index: {userIndex}, username: {username}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Check if any of the textboxes are empty
+            if (string.IsNullOrWhiteSpace(txtGoalName.Text) || 
+                string.IsNullOrWhiteSpace(txtGoalAmount.Text) || 
+                string.IsNullOrWhiteSpace(txtTargetDate.Text) || 
+                string.IsNullOrWhiteSpace(txtContributionAmount.Text))
+            {
+                MessageBox.Show("Please fill in all the required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Exit the method without saving the goal
+            }
+
             // Collect goal details from the user
             string goalName = txtGoalName.Text;
             string goalAmount = txtGoalAmount.Text;
             string targetDate = txtTargetDate.Text;
             string contributionAmount = txtContributionAmount.Text;
-
+    
             // Prepare the goal data string
-            string goalData = $"Goal Name: {goalName}, Amount: {goalAmount}, Target Date: {targetDate}, " +
+            string goalData = $"Goal Name: {goalName}, Amount: {goalAmount}$, Target Date: {targetDate}, " +
                               $"Contribution Amount: {contributionAmount}";
-
+    
             // Get the current user's index and username from the properties
+            // int userIndex = Index; // Use the Index property
+            // string username = Username; // Use the Username property
+    
+            // Prepare the full data string including index and username
             int userIndex = Index; // Use the Index property
             string username = Username; // Use the Username property
-
-            // Prepare the full data string including index and username
             string fullData = $"index: {userIndex}, username: {username}, {goalData}";
-
+    
             // Write the data to the text file
             string filePath = "saving_goal.txt";
             try
