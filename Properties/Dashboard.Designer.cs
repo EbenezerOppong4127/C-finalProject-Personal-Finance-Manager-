@@ -31,6 +31,7 @@ namespace PersonalFinanceManager.Properties
         /// </summary>
         private void InitializeComponent()
         {
+            
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.financialGoal = new System.Windows.Forms.Button();
@@ -42,10 +43,13 @@ namespace PersonalFinanceManager.Properties
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameDash = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.setTotalBalence = new System.Windows.Forms.Label();
             this.lbAcntBadg = new System.Windows.Forms.Label();
+        
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -105,6 +109,7 @@ namespace PersonalFinanceManager.Properties
             this.expenseTrack.TabIndex = 5;
             this.expenseTrack.Text = "Expense Tracking";
             this.expenseTrack.UseVisualStyleBackColor = false;
+            this.expenseTrack.Click += new System.EventHandler(this.expenseTrack_Click);
             // 
             // SavingGoal
             // 
@@ -165,6 +170,8 @@ namespace PersonalFinanceManager.Properties
             // mainpanel
             // 
             this.mainpanel.BackColor = System.Drawing.Color.RosyBrown;
+            this.mainpanel.Controls.Add(this.setTotalBalence);
+           
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Font = new System.Drawing.Font("Shonar Bangla", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainpanel.Location = new System.Drawing.Point(186, 0);
@@ -172,7 +179,16 @@ namespace PersonalFinanceManager.Properties
             this.mainpanel.Size = new System.Drawing.Size(765, 577);
             this.mainpanel.TabIndex = 3;
             // 
-            // lbAcntBadg
+            // setTotalBalence
+            // 
+            this.setTotalBalence.Font = new System.Drawing.Font("Shonar Bangla", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.setTotalBalence.Location = new System.Drawing.Point(104, 114);
+            this.setTotalBalence.Name = "setTotalBalence";
+            this.setTotalBalence.Size = new System.Drawing.Size(185, 39);
+            this.setTotalBalence.TabIndex = 1;
+            this.setTotalBalence.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+           
             // 
             this.lbAcntBadg.Location = new System.Drawing.Point(0, 0);
             this.lbAcntBadg.Name = "lbAcntBadg";
@@ -199,8 +215,11 @@ namespace PersonalFinanceManager.Properties
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mainpanel.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label setTotalBalence;
 
         private System.Windows.Forms.Label lbAcntBadg;
 
